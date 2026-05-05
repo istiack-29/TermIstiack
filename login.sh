@@ -3,16 +3,16 @@
 bash banner.sh
 echo
 
-# User Initialization
+# ইউজার থেকে ইনপুট নেওয়া
 read -p $'\e[1;32m  Enter \033[33mUsername \033[37mfor \033[32mLogin:\e[0m ' username                
 read -p $'\e[1;32m  Enter \033[33mPassword \033[37mfor \033[32mLogin:\e[0m ' password 
 echo
 read -p $'\033[1m\033[32m  Your \033[0mShell \033[38;5;209mName\033[31m: \033[33m\033[1m ' names
 
-# Theme Generation with Date (YYYY-MM-DD) and Time (24h)
+# থিম জেনারেট করা (ডেট: YYYY-MM-DD, টাইম: 24h এবং ইউজারের দেওয়া শেলের নাম)
 echo "PROMPT=$'%B%F{green}┌─[%F{white}%D{%Y-%m-%d} %*%F{green}]─────[%F{white}${names}%F{green}]\n└─[%F{yellow}%~%F{green}]──►%F{cyan} %b'" > $HOME/.istiack_theme
 
-# Creating the .zshrc Masterpiece
+# .zshrc ফাইল তৈরি করা
 cat <<EOF > $HOME/.zshrc
 export ZSH="\$HOME/.oh-my-zsh"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
@@ -22,19 +22,16 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 trap '' 2
 attempts=3
 
-# --- Ultra-Silent Auto-Update Engine ---
-{
-    cd \$HOME/TermIstiack
-    git fetch &>/dev/null
-    LOCAL=\$(git rev-parse @)
-    REMOTE=\$(git rev-parse @{u})
-    if [ \$LOCAL != \$REMOTE ]; then
-        git pull &>/dev/null
-        chmod +x *
-    fi
-} &! 
+# টার্মিনালের জব নোটিফিকেশন বন্ধ করা যাতে হিজিবিজি লেখা না আসে
+unsetopt MONITOR
+
+# অতি সাবধানে ব্যাকগ্রাউন্ডে আপডেট চেক করা
+(
+    cd \$HOME/TermIstiack && git fetch &>/dev/null && git pull &>/dev/null && chmod +x * &>/dev/null
+) & disown
 
 clear
+# লগইন ব্যানার
 echo -e "\e[1;32m      
 ░▒▓█▓▒░      ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░▒▓███████▓▒░  
 ░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
@@ -56,26 +53,29 @@ while [ \$attempts -gt 0 ]; do
 
     if [[ "\$user" == "$username" && "\$pass" == "$password" ]]; then
         clear
+        # সাউন্ড ইফেক্ট রান করা
         python \$HOME/TermIstiack/sound_effect.py 2>/dev/null
         clear
+        
+        # ছোট প্রিমিয়াম ASCII আর্ট
         echo -e "\e[1;32m
   _____                   ___     _   _            _    
  |_   _|__ _ __ _ __ ___ |_ _|___| |_(_) __ _  ___| | __
    | |/ _ \ '__| '_ \` _ \ | |/ __| __| |/ _\` |/ __| |/ /
    | |  __/ |  | | | | | | | |\__ \ |_| | (_| | (__|   < 
-   |_|\___|_|  |_| |_| |_|___|___/\__|_|\__,_|\___|_|\_\\ \e[0m"
+   |_|\___|_|  |_| |_| |_|___|___/\__|_|\__,_|\___|_|\_\\\ \e[0m"
         
         echo -e "      \e[1;33m— \e[1;32m▂▃▄▅▆▇ \e[1;37mCoded By \e[1;33mIstiack \e[1;32m▇▆▅▄▃▂ \e[1;33m—\e[0m"
         echo -e "   \e[1;31m────────────────────────────────────────────\e[0m"
         
-        # Social Buttons
-        echo -e "   \e[1;34m[Facebook] \e[1;37m: \e[4;34mfb.com/istiack.29\e[0m"
-        echo -e "   \e[1;35m[Instagram]\e[1;37m : \e[4;35minsta.com/istiack\e[0m"
-        echo -e "   \e[1;36m[Website]  \e[1;37m : \e[4;36mistiack.me\e[0m"
+        # সোশ্যাল বাটনসমূহ
+        echo -e "   \e[1;34m[Facebook] \e[1;37m: \e[4;34mhttps://fb.com/istiack.29\e[0m"
+        echo -e "   \e[1;35m[Instagram]\e[1;37m : \e[4;35mhttps://insta.com/istiack\e[0m"
+        echo -e "   \e[1;36m[Website]  \e[1;37m : \e[4;36mhttps://istiack.me\e[0m"
         echo -e "   \e[1;31m────────────────────────────────────────────\e[0m"
 
-        # Command Guide
-        echo -e "   \e[1;33m[ COMMAND LIST ]\e[0m"
+        # কমান্ড গাইড
+        echo -e "   \e[1;33m[ QUICK COMMAND LIST ]\e[0m"
         echo -e "   \e[1;32mtheme   \e[1;37m-> Change terminal colors instantly"
         echo -e "   \e[1;32mmusic   \e[1;37m-> Play background music matrix"
         echo -e "   \e[1;32mup      \e[1;37m-> Full system update & upgrade"
@@ -91,6 +91,8 @@ while [ \$attempts -gt 0 ]; do
         alias theme='bash ~/TermIstiack/change.sh'
         alias music='bash ~/TermIstiack/music.sh'
         trap 2
+        # লগইন শেষে সরাসরি হোম ডিরেক্টরিতে থাকবে
+        cd \$HOME
         break
     else
         ((attempts--))
