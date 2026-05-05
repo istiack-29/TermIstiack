@@ -373,3 +373,4 @@ echo -e "  \e[1;32mcls     \e[0m: Ultra-fast screen clear"
 echo -e "  \e[1;32mistiack \e[0m: Jump to project core directory"
 echo -e "  \033[33m________________________________________________________\e[0m"
 echo
+}
