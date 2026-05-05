@@ -1,9 +1,12 @@
+
 # ⚡ TERMISTIACK ⚡
 
 ## 🚀 The Ultimate Terminal Masterpiece
 **TermIstiack** is no longer just a theme—it is a **Full Terminal OS Experience**. Rebuilt from the ground up with a Zsh-based engine, it brings elite features like AI-powered auto-suggestions, background music looping, and a live theme engine to your Android or Linux environment.
 
 **Repository Views** ![Views](https://profile-counter.glitch.me/TermIstiack/count.svg)
+
+---
 
 ## 💎 Exclusive Ultra-Premium Features
 * 🛡️ **Intruder Alert System**: 3-attempts login security. Fail 3 times, and the terminal locks into a Matrix execution screen.
@@ -13,6 +16,17 @@
 * 🎧 **Hidden Audio Matrix**: Type `music` to trigger a background loop player. Plays your m1.mp3, m2.mp3 etc. from a hidden `.music` folder.
 * 🔊 **Jarvis OS Sounds**: High-quality audio feedback upon successful system access.
 * ⚡ **Turbo Aliases**: Built-in shortcuts like `up` (update), `cls` (clear), and `istiack` (jump to home).
+
+---
+
+## 📸 Interface Preview
+
+| 🔐 Login Screen | 🚀 Booting Process | 💻 Main Terminal |
+| :---: | :---: | :---: |
+| ![Login](.img/IMG_20240307_234826.jpg) | ![Booting](.img/IMG_20240306_233903.jpg) | ![Shell](.img/IMG_20240307_234741.jpg) |
+| *Login Interface* | *Premium Animation* | *Zsh Custom Prompt* |
+
+---
 
 ## ⚡ INSTANT INSTALLATION (Copy & Paste)
 
@@ -34,7 +48,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install git zsh mpv cmatrix p
 | up | One-tap system update and upgrade |
 | cls | Ultra-fast screen clear |
 | istiack | Instantly jump to the project core directory |
-> **Pro Tip**: To use the music player, move your mp3 files to ~/TermIstiack/.music/ and rename them to m1.mp3, m2.mp3 and so on.
+> **Pro Tip**: To use the music player, move your mp3 files to ~/TermIstiack/.music/ and rename them to **m1.mp3**, **m2.mp3** and so on.
 > 
 ## 📜 Copyright & License
 This masterpiece is authored by **Istiack**.
@@ -42,14 +56,4 @@ This masterpiece is authored by **Istiack**.
  2. Intended for personal and educational use.
  3. The author is not responsible for any misuse of the tool.
 **Coded With ❤️ By Istiack [istiack-29]**
-```
-
----
-
-### **কেন এমন হলো?**
-১. **Missing Newlines:** আপনার আগের স্ক্রিনশটে দেখা যাচ্ছে প্যারাগ্রাফের মাঝে কোনো গ্যাপ নেই। মার্কডাউনে এক লাইন থেকে অন্য লাইনের মাঝে অন্তত একটা ফাঁকা লাইন রাখতে হয়।
-২. **Backtick Error:** কমান্ডের শুরুতে এবং শেষে যে তিনটি করে চিহ্ন (```) থাকে, সেগুলো ভুল জায়গায় পড়েছিল।
-
-এখন ওপরের এই ফ্রেশ কোডটি পেস্ট করে সেভ করুন, একদম সুপার প্রিমিয়াম লুক চলে আসবে! কোনো সমস্যা হলে জানান।
-
 ```
