@@ -9,8 +9,8 @@ read -p $'\e[1;32m  Enter \033[33mPassword \033[37mfor \033[32mLogin:\e[0m ' pas
 echo
 read -p $'\033[1m\033[32m  Your \033[0mShell \033[38;5;209mName\033[31m: \033[33m\033[1m ' names
 
-# Theme Generation
-echo "PROMPT=$'%B%F{green}┌─[%F{white}%T%F{green}]─────[%F{white}${names}%F{green}]───[%F{209}%!%F{green}]\n|\n└─[%F{yellow}%~%F{green}]────►%F{cyan} %b'" > $HOME/.istiack_theme
+# Theme Generation with Date (YYYY-MM-DD) and Time (24h)
+echo "PROMPT=$'%B%F{green}┌─[%F{white}%D{%Y-%m-%d} %*%F{green}]─────[%F{white}${names}%F{green}]\n└─[%F{yellow}%~%F{green}]──►%F{cyan} %b'" > $HOME/.istiack_theme
 
 # Creating the .zshrc Masterpiece
 cat <<EOF > $HOME/.zshrc
@@ -20,9 +20,19 @@ source \$ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 trap '' 2
-
-# Resetting attempts inside the shell session
 attempts=3
+
+# --- Ultra-Silent Auto-Update Engine ---
+{
+    cd \$HOME/TermIstiack
+    git fetch &>/dev/null
+    LOCAL=\$(git rev-parse @)
+    REMOTE=\$(git rev-parse @{u})
+    if [ \$LOCAL != \$REMOTE ]; then
+        git pull &>/dev/null
+        chmod +x *
+    fi
+} &! 
 
 clear
 echo -e "\e[1;32m      
@@ -37,19 +47,6 @@ echo -e "\e[1;32m
 \033[33m               Login To \033[32mContinue
 \033[31m           ────────────────────────────\e[0m"
 
-# Auto-Update logic placed properly
-(
-    cd \$HOME/TermIstiack
-    git fetch &>/dev/null
-    LOCAL=\$(git rev-parse @)
-    REMOTE=\$(git rev-parse @{u})
-    if [ \$LOCAL != \$REMOTE ]; then
-        echo -e "\e[1;33m[*] System Update Found! Syncing...\e[0m"
-        git pull &>/dev/null
-        chmod +x *
-    fi
-) &
-
 while [ \$attempts -gt 0 ]; do
     echo -ne "       \e[33m\033[1m[\033[31m+\033[33m] \033[37mUSERNAME:\033[32m "
     read user
@@ -59,18 +56,33 @@ while [ \$attempts -gt 0 ]; do
 
     if [[ "\$user" == "$username" && "\$pass" == "$password" ]]; then
         clear
-        cd \$HOME/TermIstiack
-        python sound_effect.py 2>/dev/null
+        python \$HOME/TermIstiack/sound_effect.py 2>/dev/null
         clear
-        echo -e "\033[1m\033[33m
-██╗███████╗████████╗██╗ █████╗  ██████╗██╗  ██╗
-██║██╔════╝╚══██╔══╝██║██╔══██╗██╔════╝██║ ██╔╝
-██║███████╗   ██║   ██║███████║██║     █████╔╝ 
-██║╚════██║   ██║   ██║██╔══██║██║     ██╔═██╗ 
-██║███████║   ██║   ██║██║  ██║╚██████╗██║  ██╗
-╚═╝╚══════╝   ╚═╝   ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝\033[0m"
-        echo -e "     \e[1m\e[32m▂▃▄▅▆▇▓▒░ \033[1mCoded By \e[33mIstiack \e[1m\e[32m░▒▓▇▆▅▄▃▂"
-        echo -e "   \033[1m\033[33m]\033[31m──────────────────────────────────────\033[33m["
+        echo -e "\e[1;32m
+  _____                   ___     _   _            _    
+ |_   _|__ _ __ _ __ ___ |_ _|___| |_(_) __ _  ___| | __
+   | |/ _ \ '__| '_ \` _ \ | |/ __| __| |/ _\` |/ __| |/ /
+   | |  __/ |  | | | | | | | |\__ \ |_| | (_| | (__|   < 
+   |_|\___|_|  |_| |_| |_|___|___/\__|_|\__,_|\___|_|\_\\ \e[0m"
+        
+        echo -e "      \e[1;33m— \e[1;32m▂▃▄▅▆▇ \e[1;37mCoded By \e[1;33mIstiack \e[1;32m▇▆▅▄▃▂ \e[1;33m—\e[0m"
+        echo -e "   \e[1;31m────────────────────────────────────────────\e[0m"
+        
+        # Social Buttons
+        echo -e "   \e[1;34m[Facebook] \e[1;37m: \e[4;34mfb.com/istiack.29\e[0m"
+        echo -e "   \e[1;35m[Instagram]\e[1;37m : \e[4;35minsta.com/istiack\e[0m"
+        echo -e "   \e[1;36m[Website]  \e[1;37m : \e[4;36mistiack.me\e[0m"
+        echo -e "   \e[1;31m────────────────────────────────────────────\e[0m"
+
+        # Command Guide
+        echo -e "   \e[1;33m[ COMMAND LIST ]\e[0m"
+        echo -e "   \e[1;32mtheme   \e[1;37m-> Change terminal colors instantly"
+        echo -e "   \e[1;32mmusic   \e[1;37m-> Play background music matrix"
+        echo -e "   \e[1;32mup      \e[1;37m-> Full system update & upgrade"
+        echo -e "   \e[1;32mcls     \e[1;37m-> Clear screen"
+        echo -e "   \e[1;32mistiack \e[1;37m-> Jump to core project folder"
+        echo -e "   \e[1;31m────────────────────────────────────────────\e[0m"
+        echo
         
         source \$HOME/.istiack_theme
         alias istiack='cd ~/TermIstiack'
