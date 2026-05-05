@@ -57,7 +57,7 @@ To customize your Termux, copy and paste the commands below:
 ```bash
 apt update && apt upgrade -y
 pkg install git -y
-git clone [https://github.com/istiack-29/TermIstiack](https://github.com/istiack-29/TermIstiack)
+git clone https://github.com/istiack-29/TermIstiack
 cd TermIstiack
 chmod +x *
 bash setup.sh
@@ -65,7 +65,7 @@ bash setup.sh
 ```
 ### One-Click Installation
 ```bash
-apt update && apt upgrade -y && pkg install git -y && git clone [https://github.com/istiack-29/TermIstiack](https://github.com/istiack-29/TermIstiack) && cd TermIstiack && chmod +x * && bash setup.sh 
+apt update && apt upgrade -y && pkg install git -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh 
 
 ```
 ## Copyright & License
