@@ -21,10 +21,10 @@
 
 ## 📸 Interface Preview
 
-| 🔐 Login Screen | 🚀 Booting Process | 💻 Main Terminal |
-| :---: | :---: | :---: |
-| ![Login](.img/IMG_20240307_234826.jpg) | ![Booting](.img/IMG_20240306_233903.jpg) | ![Shell](.img/IMG_20240307_234741.jpg) |
-| *Login Interface* | *Premium Animation* | *Zsh Custom Prompt* |
+| 🔐 Login Screen | 🔴 Main Terminal |
+| :---: | :---: |
+| ![Login](.img/login.jpg) | ![Shell](.img/main.jpg) |
+| *Login Interface* | *Main Interface* |
 
 ---
 
