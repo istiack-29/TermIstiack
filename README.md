@@ -32,12 +32,12 @@
 
 ### 📱 For Termux
 ```bash
-apt update && apt upgrade -y && pkg install git -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh
+apt update && apt upgrade -y -o Dpkg::Options::="--force-confold" && pkg install git -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh
 
 ```
 ### 🐧 For Linux (Debian/Ubuntu/Kali)
 ```bash
-sudo apt update && sudo apt upgrade -y && sudo apt install git zsh mpv cmatrix pv figlet -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh
+export DEBIAN_FRONTEND=noninteractive && sudo apt update && sudo apt upgrade -y -o Dpkg::Options::="--force-confold" && sudo apt install git -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh
 
 ```
 ## 🛠️ Terminal Commands Manual
