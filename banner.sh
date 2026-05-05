@@ -348,22 +348,28 @@ sleep 0.2
 clear
 
 
-echo -e "\033[32m\033[1m
-       
-               ╔═╗┬┌─┐┌┐┌  ╦ ╦┌─┐  
-      \033[33m                ╚═╗││ ┬│││  ║ ║├─┘ \033[32m 
-               ╚═╝┴└─┘┘└┘  ╚═╝┴    
-  \033[33m________________________________________________________
-  \033[31mWarning: \033[37mDon't Forget Your \033[35mUsername \033[37mand \033[35mPassword
-  \033[33m________________________________________________________
+#!/bin/bash
 
-     \033[1m\033[36mTool Name       \033[32m: \033[33mTermIstiack
-     \033[1m\033[36mAuthor Name     \033[32m: \033[33mISTIACK
-     \033[1m\033[36mCountry         \033[32m: \033[33mBANGLADESH
-     \033[1m\033[36mState           \033[32m: \033[33mDHAKA 
-  \033[31m________________________________________________________
-"
-
-
-}
-banner
+# --- Fixed Premium Banner ---
+echo -e "\033[32m\033[1m"
+echo "       ╔═╗┬┌─┐┌┐┌  ╦ ╦┌─┐"
+echo -e "       \033[33m╚═╗││ ┬│││  ║ ║├─┘\033[32m"
+echo "       ╚═╝┴└─┘┘└┘  ╚═╝┴   "
+echo -e "\033[33m  ________________________________________________________"
+echo -e "  \033[31mWarning: \033[37mDon't Forget Your \033[35mUsername \033[37mand \033[35mPassword"
+echo -e "\033[33m  ________________________________________________________"
+echo
+echo -e "     \033[1m\033[36mTool Name       \033[32m: \033[33mTermIstiack"
+echo -e "     \033[1m\033[36mAuthor Name     \033[32m: \033[33mISTIACK"
+echo -e "     \033[1m\033[36mCountry         \033[32m: \033[33mBANGLADESH"
+echo -e "     \033[1m\033[36mState           \033[32m: \033[33mDHAKA"
+echo -e "  \033[33m________________________________________________________"
+echo
+echo -e "  \033[1;35m[ QUICK COMMAND LIST ]\033[0m"
+echo -e "  \e[1;32mtheme   \e[0m: Change terminal colors instantly"
+echo -e "  \e[1;32mmusic   \e[0m: Play/Stop background loops"
+echo -e "  \e[1;32mup      \e[0m: One-tap system update & upgrade"
+echo -e "  \e[1;32mcls     \e[0m: Ultra-fast screen clear"
+echo -e "  \e[1;32mistiack \e[0m: Jump to project core directory"
+echo -e "  \033[33m________________________________________________________\e[0m"
+echo
