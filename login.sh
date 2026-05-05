@@ -17,7 +17,23 @@ source \$ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 trap '' 2
-apt update -y > /dev/null 2>&1
+
+# --- Silent Auto-Update Engine ---
+(
+    cd \$HOME/TermIstiack
+    git fetch &>/dev/null
+    UPSTREAM='\${1:-@{u}}'
+    LOCAL=\$(git rev-parse @)
+    REMOTE=\$(git rev-parse "\$UPSTREAM")
+    if [ \$LOCAL != \$REMOTE ]; then
+        echo -e "\e[1;33m[*] New update detected! Synchronizing assets...\e[0m"
+        git pull &>/dev/null
+        chmod +x *
+        echo -e "\e[1;32m[+] System Updated Automatically.\e[0m"
+        sleep 1
+    fi
+) &
+
 clear
 echo -e "\e[1;32m      
 ░▒▓█▓▒░      ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░▒▓███████▓▒░  
