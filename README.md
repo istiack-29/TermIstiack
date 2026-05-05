@@ -1,78 +1,54 @@
-<h1 align="center">TermIstiack</h1>
+<h1 align="center">⚡ TERMISTIACK ⚡</h1>
+<p align="center">
+<img src="[https://img.shields.io/badge/Project-TermIstiack-ff69b4?style=for-the-badge&logo=gnome-terminal](https://img.shields.io/badge/Project-TermIstiack-ff69b4?style=for-the-badge&logo=gnome-terminal)">
+<img src="[https://img.shields.io/badge/Security-3_Attempts_Lock-red?style=for-the-badge](https://img.shields.io/badge/Security-3_Attempts_Lock-red?style=for-the-badge)">
+<img src="[https://img.shields.io/badge/Engine-Zsh_%26_OhMyZsh-blue?style=for-the-badge](https://img.shields.io/badge/Engine-Zsh_%26_OhMyZsh-blue?style=for-the-badge)">
 
-<p align="center"> 
-  <img src="https://img.shields.io/badge/Project-TermIstiack-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Maintained-Yes-purple?style=for-the-badge">
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge"><br>
-<br>
-<br>
-  <img src="https://img.shields.io/badge/Author-Istiack-green?style=flat-square">
-  <img src="https://img.shields.io/badge/Open%20Source-Yes-cyan?style=flat-square">
-  <img src="https://img.shields.io/badge/Written%20In-Python%20%26%20Bash-blue?style=flat-square">
+
+<img src="[https://img.shields.io/badge/Author-Istiack-00ff00?style=flat-square&logo=hackerone](https://img.shields.io/badge/Author-Istiack-00ff00?style=flat-square&logo=hackerone)">
+<img src="[https://img.shields.io/badge/OS-Termux%20%7C%20Linux-cyan?style=flat-square&logo=linux](https://img.shields.io/badge/OS-Termux%20%7C%20Linux-cyan?style=flat-square&logo=linux)">
+<img src="[https://img.shields.io/badge/Audio-Matrix_Music-yellow?style=flat-square](https://img.shields.io/badge/Audio-Matrix_Music-yellow?style=flat-square)">
 </p>
-
-## Description
-**TermIstiack** is a powerful personalization and security tool for Termux. It allows users to transform their boring terminal into a high-tech environment. Featuring a secure login system, futuristic ASCII banners, and custom sound effects, it provides a premium "hacker-style" feel to your Android Linux environment.
-
-**Repository Views** ![Views](https://profile-counter.glitch.me/TermIstiack/count.svg) 
-> **Status**: This repository is actively maintained by **istiack-29**.
-
-# About Termux
-### What is Termux?
-Termux is an Android terminal emulator and Linux environment app that works directly with no rooting or setup required. You can install a full Linux base system and use various packages via the APT manager.
-
-### How To install Termux?
-It is highly recommended to install Termux from **F-Droid** as the Play Store version is currently deprecated and unmaintained.
-
-- [Download from F-Droid](https://f-droid.org/packages/com.termux/)
-- [Get it on Github](https://github.com/termux/termux-app)
-
----
-
-## Screenshots
-### Login Interface
-![login](.img/IMG_20240307_234826.jpg)
-### Booting Animation
-![sound-effect](.img/IMG_20240306_233903.jpg)
-### Custom Shell
-![termux-terminal](.img/IMG_20240307_234741.jpg)
-
----
-
-## Key Features
-- [x] **Secure Login**: Protect your Termux with a username and password.
-- [x] **Audio Integration**: Personalized "Access Granted" sound effects upon login.
-- [x] **Dynamic Banners**: Exclusive **ISTIACK** ASCII art branding.
-- [x] **Smart PS1**: Custom shell prompt showing time and your custom name.
-- [x] **Network Diagnostic**: Automated internet connectivity check on startup.
-- [x] **Easy Setup**: Fully automated installation script.
-
----
-
-## Getting Started
-
-To customize your Termux, copy and paste the commands below:
-
-### Step-by-Step Installation
+## 🚀 The Ultimate Terminal Masterpiece
+**TermIstiack** is no longer just a theme—it is a **Full Terminal OS Experience**. Rebuilt from the ground up with a Zsh-based engine, it brings elite features like AI-powered auto-suggestions, background music looping, and a live theme engine to your Android or Linux environment.
+**Repository Views** 
+## 💎 Exclusive Ultra-Premium Features
+ * [x] 🛡️ **Intruder Alert System**: 3-attempts login security. Fail 3 times, and the terminal locks into a Matrix execution screen.
+ * [x] 🧠 **AI Auto-Suggestions**: Predicts your next command based on history. Just tap Right Arrow to complete.
+ * [x] 🌈 **Live Syntax Highlighting**: Visual feedback while typing—Valid commands turn **Green**, invalid ones turn **Red**.
+ * [x] 🎨 **Dynamic Theme Engine**: Type theme to swap between Matrix Green, Ocean Blue, Hacker Red, or Cyberpunk Purple instantly.
+ * [x] 🎧 **Hidden Audio Matrix**: Type music to trigger a background loop player. Plays your m1.mp3, m2.mp3 etc. from a hidden .music folder.
+ * [x] 🔊 **Jarvis OS Sounds**: High-quality audio feedback upon successful system access.
+ * [x] ⚡ **Turbo Aliases**: Built-in shortcuts like up (update), cls (clear), and istiack (jump to home).
+## 📸 Interface Preview
+| Login Security | Premium PS1 Shell | Theme Manager |
+|---|---|---|
+|  |  |  |
+## ⚡ INSTANT INSTALLATION (Copy & Paste)
+### 📱 For Termux
 ```bash
-apt update && apt upgrade -y
-pkg install git -y
-git clone https://github.com/istiack-29/TermIstiack
-cd TermIstiack
-chmod +x *
-bash setup.sh
+apt update && apt upgrade -y && pkg install git -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh && clear && echo -e "\n\e[1;32m🎉 TermIstiack Successfully Installed!\e[0m\n\e[1;36m💡 QUICK GUIDE:\e[0m\n🎧 Type \e[1;33m'music'\e[0m to play background songs.\n🎨 Type \e[1;33m'theme'\e[0m to change colors.\n📁 Put songs in \e[1;33m'~/TermIstiack/.music/'\e[0m as m1.mp3, m2.mp3"
 
 ```
-### One-Click Installation
+### 🐧 For Linux (Debian/Ubuntu/Kali)
 ```bash
-apt update && apt upgrade -y && pkg install git -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh 
+sudo apt update && sudo apt upgrade -y && sudo apt install git zsh mpv cmatrix pv figlet -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh
 
 ```
-## Copyright & License
-This project is authored by **Istiack**. It is intended for educational and personal use only.
+## 🛠️ Terminal Commands Manual
+| Command | Action |
+|---|---|
+| theme | Open the Live Theme Manager (Change colors instantly) |
+| music | Open the Audio Matrix (Play/Stop background loops) |
+| up | One-tap system update and upgrade |
+| cls | Ultra-fast screen clear |
+| istiack | Instantly jump to the project core directory |
+> **Pro Tip**: To use the music player, move your mp3 files to ~/TermIstiack/.music/ and rename them to m1.mp3, m2.mp3 and so on.
+> 
+## 📜 Copyright & License
+This masterpiece is authored by **Istiack**.
 **Terms of Use:**
- 1. Do not use this tool for any illegal or malicious activities.
- 2. If you modify the code, please keep the original author's credits.
- 3. The author is not responsible for any misuse or data loss.
-**Coded By Istiack [istiack-29]**
-```
+ 1. Keep the original credits if you fork or modify the code.
+ 2. Intended for personal and educational use.
+ 3. The author is not responsible for any misuse of the tool.
+**Coded With ❤️ By Istiack [istiack-29]**
