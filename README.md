@@ -1,38 +1,29 @@
-<h1 align="center">⚡ TERMISTIACK ⚡</h1>
-<p align="center">
-<img src="[https://img.shields.io/badge/Project-TermIstiack-ff69b4?style=for-the-badge&logo=gnome-terminal](https://img.shields.io/badge/Project-TermIstiack-ff69b4?style=for-the-badge&logo=gnome-terminal)">
-<img src="[https://img.shields.io/badge/Security-3_Attempts_Lock-red?style=for-the-badge](https://img.shields.io/badge/Security-3_Attempts_Lock-red?style=for-the-badge)">
-<img src="[https://img.shields.io/badge/Engine-Zsh_%26_OhMyZsh-blue?style=for-the-badge](https://img.shields.io/badge/Engine-Zsh_%26_OhMyZsh-blue?style=for-the-badge)">
+# ⚡ TERMISTIACK ⚡
 
-
-<img src="[https://img.shields.io/badge/Author-Istiack-00ff00?style=flat-square&logo=hackerone](https://img.shields.io/badge/Author-Istiack-00ff00?style=flat-square&logo=hackerone)">
-<img src="[https://img.shields.io/badge/OS-Termux%20%7C%20Linux-cyan?style=flat-square&logo=linux](https://img.shields.io/badge/OS-Termux%20%7C%20Linux-cyan?style=flat-square&logo=linux)">
-<img src="[https://img.shields.io/badge/Audio-Matrix_Music-yellow?style=flat-square](https://img.shields.io/badge/Audio-Matrix_Music-yellow?style=flat-square)">
-</p>
 ## 🚀 The Ultimate Terminal Masterpiece
 **TermIstiack** is no longer just a theme—it is a **Full Terminal OS Experience**. Rebuilt from the ground up with a Zsh-based engine, it brings elite features like AI-powered auto-suggestions, background music looping, and a live theme engine to your Android or Linux environment.
-**Repository Views** 
+
+**Repository Views** ![Views](https://profile-counter.glitch.me/TermIstiack/count.svg)
+
 ## 💎 Exclusive Ultra-Premium Features
- * [x] 🛡️ **Intruder Alert System**: 3-attempts login security. Fail 3 times, and the terminal locks into a Matrix execution screen.
- * [x] 🧠 **AI Auto-Suggestions**: Predicts your next command based on history. Just tap Right Arrow to complete.
- * [x] 🌈 **Live Syntax Highlighting**: Visual feedback while typing—Valid commands turn **Green**, invalid ones turn **Red**.
- * [x] 🎨 **Dynamic Theme Engine**: Type theme to swap between Matrix Green, Ocean Blue, Hacker Red, or Cyberpunk Purple instantly.
- * [x] 🎧 **Hidden Audio Matrix**: Type music to trigger a background loop player. Plays your m1.mp3, m2.mp3 etc. from a hidden .music folder.
- * [x] 🔊 **Jarvis OS Sounds**: High-quality audio feedback upon successful system access.
- * [x] ⚡ **Turbo Aliases**: Built-in shortcuts like up (update), cls (clear), and istiack (jump to home).
-## 📸 Interface Preview
-| Login Security | Premium PS1 Shell | Theme Manager |
-|---|---|---|
-|  |  |  |
+* 🛡️ **Intruder Alert System**: 3-attempts login security. Fail 3 times, and the terminal locks into a Matrix execution screen.
+* 🧠 **AI Auto-Suggestions**: Predicts your next command based on history. Just tap **Right Arrow** to complete.
+* 🌈 **Live Syntax Highlighting**: Visual feedback while typing—Valid commands turn **Green**, invalid ones turn **Red**.
+* 🎨 **Dynamic Theme Engine**: Type `theme` to swap between Matrix Green, Ocean Blue, Hacker Red, or Cyberpunk Purple instantly.
+* 🎧 **Hidden Audio Matrix**: Type `music` to trigger a background loop player. Plays your m1.mp3, m2.mp3 etc. from a hidden `.music` folder.
+* 🔊 **Jarvis OS Sounds**: High-quality audio feedback upon successful system access.
+* ⚡ **Turbo Aliases**: Built-in shortcuts like `up` (update), `cls` (clear), and `istiack` (jump to home).
+
 ## ⚡ INSTANT INSTALLATION (Copy & Paste)
+
 ### 📱 For Termux
 ```bash
-apt update && apt upgrade -y && pkg install git -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh && clear && echo -e "\n\e[1;32m🎉 TermIstiack Successfully Installed!\e[0m\n\e[1;36m💡 QUICK GUIDE:\e[0m\n🎧 Type \e[1;33m'music'\e[0m to play background songs.\n🎨 Type \e[1;33m'theme'\e[0m to change colors.\n📁 Put songs in \e[1;33m'~/TermIstiack/.music/'\e[0m as m1.mp3, m2.mp3"
+apt update && apt upgrade -y && pkg install git -y && git clone [https://github.com/istiack-29/TermIstiack](https://github.com/istiack-29/TermIstiack) && cd TermIstiack && chmod +x * && bash setup.sh
 
 ```
 ### 🐧 For Linux (Debian/Ubuntu/Kali)
 ```bash
-sudo apt update && sudo apt upgrade -y && sudo apt install git zsh mpv cmatrix pv figlet -y && git clone https://github.com/istiack-29/TermIstiack && cd TermIstiack && chmod +x * && bash setup.sh
+sudo apt update && sudo apt upgrade -y && sudo apt install git zsh mpv cmatrix pv figlet -y && git clone [https://github.com/istiack-29/TermIstiack](https://github.com/istiack-29/TermIstiack) && cd TermIstiack && chmod +x * && bash setup.sh
 
 ```
 ## 🛠️ Terminal Commands Manual
@@ -47,8 +38,18 @@ sudo apt update && sudo apt upgrade -y && sudo apt install git zsh mpv cmatrix p
 > 
 ## 📜 Copyright & License
 This masterpiece is authored by **Istiack**.
-**Terms of Use:**
  1. Keep the original credits if you fork or modify the code.
  2. Intended for personal and educational use.
  3. The author is not responsible for any misuse of the tool.
 **Coded With ❤️ By Istiack [istiack-29]**
+```
+
+---
+
+### **কেন এমন হলো?**
+১. **Missing Newlines:** আপনার আগের স্ক্রিনশটে দেখা যাচ্ছে প্যারাগ্রাফের মাঝে কোনো গ্যাপ নেই। মার্কডাউনে এক লাইন থেকে অন্য লাইনের মাঝে অন্তত একটা ফাঁকা লাইন রাখতে হয়।
+২. **Backtick Error:** কমান্ডের শুরুতে এবং শেষে যে তিনটি করে চিহ্ন (```) থাকে, সেগুলো ভুল জায়গায় পড়েছিল।
+
+এখন ওপরের এই ফ্রেশ কোডটি পেস্ট করে সেভ করুন, একদম সুপার প্রিমিয়াম লুক চলে আসবে! কোনো সমস্যা হলে জানান।
+
+```
